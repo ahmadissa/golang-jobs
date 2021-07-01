@@ -1,3 +1,5 @@
 # golang-jobs 
 
-Global pool of jobs that can be used globally in the app
+A simple global pool of jobs, jobs added to the pool can be used globally.
+
+Check the test file for more info.
