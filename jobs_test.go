@@ -13,6 +13,9 @@ func TestRun(t *testing.T) {
 	testFN := func(x ...interface{}) error {
 		return nil
 	}
+	testFNStr := func(x ...string) error {
+		return nil
+	}
 	Add("testFN", testFN)
 	err = Run("testFN")
 	if err != nil {
@@ -20,6 +23,11 @@ func TestRun(t *testing.T) {
 	}
 	Add("testFN1", testFN)
 	err = Run("testFN1")
+	if err != nil {
+		t.Error(err)
+	}
+	AddStr("testFNStr", testFNStr)
+	err = RunStr("testFNStr")
 	if err != nil {
 		t.Error(err)
 	}
